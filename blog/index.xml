@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Wayne Chane</title>
-    <link>https://waynecychang.github.io/WayneChangBlog/blog/</link>
+    <link>https://waynecychang.github.io/blog/</link>
     <description>Recent content in Blogs on Wayne Chane</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sun, 01 Nov 2020 12:46:41 +0800</lastBuildDate><atom:link href="https://waynecychang.github.io/WayneChangBlog/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Nov 2020 12:46:41 +0800</lastBuildDate><atom:link href="https://waynecychang.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lite Server host Unity Web Game</title>
-      <link>https://waynecychang.github.io/WayneChangBlog/blog/2020-11/lite-server-host-unity-web-game/</link>
+      <link>https://waynecychang.github.io/blog/2020-11/lite-server-host-unity-web-game/</link>
       <pubDate>Sun, 01 Nov 2020 12:46:41 +0800</pubDate>
       
-      <guid>https://waynecychang.github.io/WayneChangBlog/blog/2020-11/lite-server-host-unity-web-game/</guid>
+      <guid>https://waynecychang.github.io/blog/2020-11/lite-server-host-unity-web-game/</guid>
       <description>使用node.js的lite-server，開啟Unity的Web Game</description>
     </item>
     
