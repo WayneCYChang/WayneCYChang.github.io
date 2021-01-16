@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="WayneChang">
+  <meta name="description" content="各種Hugo指令，都再這拉">
+  
+  <meta property="og:title" content="Overview Observables 1" />
+<meta property="og:description" content="各種Hugo指令，都再這拉" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waynecychang.github.io/study/2021-01/overview-observables-1/" />
+<meta property="article:published_time" content="2021-01-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-16T00:00:00+00:00" />
+
+
+
+  <title>
+  
+       Overview Observables 1 | Wayne Chang 
+  
+  </title>
+
+  <link rel="canonical" href="https://waynecychang.github.io/study/2021-01/overview-observables-1/">
+
+  
+  
+
+  
+  <link href="https://waynecychang.github.io/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://waynecychang.github.io/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://waynecychang.github.io/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://waynecychang.github.io/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://waynecychang.github.io/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://waynecychang.github.io/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://waynecychang.github.io/img/animation-1.ico"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://waynecychang.github.io/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://waynecychang.github.io/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://waynecychang.github.io/">
+          
+        <img class="avatar" src="https://waynecychang.github.io/img/animation-1.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> WayneChang</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://waynecychang.github.io/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://waynecychang.github.io/note/" >Note  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://waynecychang.github.io/study/" >Study  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://waynecychang.github.io/img/header-slides/raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://waynecychang.github.io/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://waynecychang.github.io/">
+          
+            <img class="pull-right avatar avatar-md" src="https://waynecychang.github.io/img/IMG_1068.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://waynecychang.github.io/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Wayne Chang</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/WayneCYChang" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+
+            
+
+            
+
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:e28s32is@gmail.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://waynecychang.github.io/categories/rxjs"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> RxJS </a></li>
+      
+    
+    
+      
+        <li><a href="https://waynecychang.github.io/series/rxjs%E5%AE%98%E6%96%B9%E6%96%87%E4%BB%B6"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>rxjs官方文件</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">Overview Observables 1</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Jan 16, 2021</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>2 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <p>(RxJS 官方網頁，不負責任翻譯 by Wayne)</p>
+<h1 id="介紹">介紹</h1>
+<p>RxJS 是一個函式庫，使用可觀察資料序列的方式，構成異步行為和基於事件的程式。函式庫提供一個核心型別(可觀察型別(Observable))，衛星型別(觀察者型別(Observer)、管理者型別(Schedulers)、傳播者型別(Subjects))跟操作者，操作者由<a href="https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.6">陣列原型</a> (map, filter, reduce, every, 等等&hellip;)所啟發，讓異步行為的處理如同資料集合(collections)。</p>
+<blockquote>
+<p>想像 RxJS 是一種提供事件處理的 Lodash</p>
+</blockquote>
+<p>ReactiveX 透過<a href="https://en.wikipedia.org/wiki/Iterator_pattern">迭代模式(Iterator pattern)</a>跟<a href="https://martinfowler.com/articles/collection-pipeline/#NestedOperatorExpressions">據資料集合的功能化程式設計(functional programming with collections)</a>
+與<a href="https://en.wikipedia.org/wiki/Observer_pattern">觀察者模式(Observer pattern)</a>的結合，滿足以理想方式管理事件序列的需求。</p>
+<p>幾個重要的 RxJS 概念以解決異步事件管理的有：</p>
+<ul>
+<li>可觀察函式(Observable)：表示一種構想中可被調用的資料集合，該資料集合來自未來的值或事件。</li>
+<li>觀察函式(Observer)：是一種資料集合的回呼函式，該函式知道如何聆聽被觀察者傳送的資料。</li>
+<li>已訂閱函式(Subscription)：表示一種已經被執行的被觀察者，主要常用於取消己被執行的被觀察者。</li>
+<li>操作函式(Operator)：一種單純的函式，該函式能使資料集合的運作，以功能化程式設計來處理，如<code>map</code>,<code>filter</code>,<code>concat</code>,<code>reduce</code>, 等等.</li>
+<li>傳播函式(Subject)：同等於 EventEmitter，而且是唯一的方法把廣播值或事件傳給複數的觀察者。</li>
+<li>管理函式(Schedulers)：是一種中央調度器可控制多重事件(concurrency)，允許使用者協調，如 setTimeout 或 requestAnimationFrame 或其它由計算所發生的事件。</li>
+</ul>
+<h1 id="第一個範例">第一個範例</h1>
+<p>一般來說你註冊一個監聽事件。<br>
+<a href="./src/app/guide-overview/guide-overview.component.ts">&lt;guide-overview&gt;:num1:#1</a><br>
+使用 RxJS 建立一個可觀察者來取代。<br>
+<a href="./src/app/guide-overview/guide-overview.component.ts">&lt;guide-overview&gt;:num1:#2</a></p>
+<h2 id="純淨">純淨</h2>
+<p>什麼原因使得 RxJS 如此強大，是因為它有能力使用純淨的函式去產生值。意謂著你的程式碼不容易出錯。<br>
+一般來說你會建立一個不純淨的函式，裡面的其它程式碼片段會搞亂你的區塊狀態。<br>
+<a href="./src/app/guide-overview/guide-overview.component.ts">&lt;guide-overview&gt;:num2:#1</a><br>
+使用 RxJS 你隔離了區塊狀態<br>
+<a href="./src/app/guide-overview/guide-overview.component.ts">&lt;guide-overview&gt;:num2:#2</a></p>
+<h2 id="程序流">程序流</h2>
+<p>RxJS 有各式各樣的操作函式去幫助你控制事件流如何通過你的可觀察函式<br>
+這是一個你將允許每秒最多一次的點擊事件，使用簡陋的 JavaScript：<br>
+<a href="./src/app/guide-overview/guide-overview.component.ts">&lt;guide-overview&gt;:num3:#1</a><br>
+使用 RxJS<br>
+<a href="./src/app/guide-overview/guide-overview.component.ts">&lt;guide-overview&gt;:num3:#2</a><br>
+其它控制程序流的操作函式有
+<a href="https://rxjs.dev/api/operators/filter">filter</a>,
+<a href="https://rxjs.dev/api/operators/delay">delay</a>,
+<a href="https://rxjs.dev/api/operators/debounceTime">debounceTime</a>,
+<a href="https://rxjs.dev/api/operators/take">take</a>,
+<a href="https://rxjs.dev/api/operators/takeUntil">takeUntil</a>,
+<a href="https://rxjs.dev/api/operators/distinct">distinct</a>,
+<a href="https://rxjs.dev/api/operators/distinctUntilChanged">distinctUntilChanged</a> 等等。</p>
+<h2 id="值">值</h2>
+<p>你可以轉換已經通過你的可觀察函式的值<br>
+這是一個你可以在每次點擊加上現在滑鼠 x 位置，使用簡陋的 JavaScript：<br>
+<a href="./src/app/guide-overview/guide-overview.component.ts">&lt;guide-overview&gt;:num4:#1</a><br>
+使用 RxJS<br>
+<a href="./src/app/guide-overview/guide-overview.component.ts">&lt;guide-overview&gt;:num4:#2</a><br>
+其它產生值的操作函式有
+<a href="https://rxjs-dev.firebaseapp.com/api/operators/pluck">pluck</a>,
+<a href="https://rxjs-dev.firebaseapp.com/api/operators/pairwise">pairwise</a>,
+<a href="https://rxjs-dev.firebaseapp.com/api/operators/sample">sample</a></p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://waynecychang.github.io/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://waynecychang.github.io/tags/rxjs" role="button">RxJS </a></li>
+      
+    
+      <li><a href="https://waynecychang.github.io/tags/observable" role="button">Observable </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%bb%8b%e7%b4%b9">
+												 介紹
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ac%ac%e4%b8%80%e5%80%8b%e7%af%84%e4%be%8b">
+												 第一個範例
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%b4%94%e6%b7%a8">
+												 純淨
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%a8%8b%e5%ba%8f%e6%b5%81">
+												 程序流
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%80%bc">
+												 值
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/WayneCYChang " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:e28s32is@gmail.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2021 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://waynecychang.github.io/js/main.js"></script>
+
+
+
+  
+  <script src="https://waynecychang.github.io/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://waynecychang.github.io/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://waynecychang.github.io/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

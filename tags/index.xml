@@ -1,36 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Wayne Chane</title>
+    <title>Tags on Wayne Chang</title>
     <link>https://waynecychang.github.io/tags/</link>
-    <description>Recent content in Tags on Wayne Chane</description>
+    <description>Recent content in Tags on Wayne Chang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sun, 01 Nov 2020 12:46:41 +0800</lastBuildDate><atom:link href="https://waynecychang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://waynecychang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>lite-server</title>
-      <link>https://waynecychang.github.io/tags/lite-server/</link>
-      <pubDate>Sun, 01 Nov 2020 12:46:41 +0800</pubDate>
+      <title>Command</title>
+      <link>https://waynecychang.github.io/tags/command/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://waynecychang.github.io/tags/lite-server/</guid>
+      <guid>https://waynecychang.github.io/tags/command/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>node.js</title>
-      <link>https://waynecychang.github.io/tags/node.js/</link>
-      <pubDate>Sun, 01 Nov 2020 12:46:41 +0800</pubDate>
+      <title>Hugo</title>
+      <link>https://waynecychang.github.io/tags/hugo/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://waynecychang.github.io/tags/node.js/</guid>
+      <guid>https://waynecychang.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>unity</title>
-      <link>https://waynecychang.github.io/tags/unity/</link>
-      <pubDate>Sun, 01 Nov 2020 12:46:41 +0800</pubDate>
+      <title>Observable</title>
+      <link>https://waynecychang.github.io/tags/observable/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://waynecychang.github.io/tags/unity/</guid>
+      <guid>https://waynecychang.github.io/tags/observable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RxJS</title>
+      <link>https://waynecychang.github.io/tags/rxjs/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://waynecychang.github.io/tags/rxjs/</guid>
       <description></description>
     </item>
     

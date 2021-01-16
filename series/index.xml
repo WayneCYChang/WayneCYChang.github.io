@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on Wayne Chane</title>
+    <title>Series on Wayne Chang</title>
     <link>https://waynecychang.github.io/series/</link>
-    <description>Recent content in Series on Wayne Chane</description>
+    <description>Recent content in Series on Wayne Chang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zn-Hans</language><atom:link href="https://waynecychang.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <language>zn-Hans</language>
+    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://waynecychang.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo今天記今天忘</title>
+      <link>https://waynecychang.github.io/series/hugo%E4%BB%8A%E5%A4%A9%E8%A8%98%E4%BB%8A%E5%A4%A9%E5%BF%98/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://waynecychang.github.io/series/hugo%E4%BB%8A%E5%A4%A9%E8%A8%98%E4%BB%8A%E5%A4%A9%E5%BF%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rxjs官方文件</title>
+      <link>https://waynecychang.github.io/series/rxjs%E5%AE%98%E6%96%B9%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://waynecychang.github.io/series/rxjs%E5%AE%98%E6%96%B9%E6%96%87%E4%BB%B6/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

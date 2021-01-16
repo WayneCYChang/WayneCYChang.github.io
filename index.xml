@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wayne Chane</title>
+    <title>Wayne Chang</title>
     <link>https://waynecychang.github.io/</link>
-    <description>Recent content on Wayne Chane</description>
+    <description>Recent content on Wayne Chang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sun, 01 Nov 2020 12:46:41 +0800</lastBuildDate><atom:link href="https://waynecychang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://waynecychang.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Lite Server host Unity Web Game</title>
-      <link>https://waynecychang.github.io/blog/2020-11/lite-server-host-unity-web-game/</link>
-      <pubDate>Sun, 01 Nov 2020 12:46:41 +0800</pubDate>
+      <title>Hugo不想再找一次指令表</title>
+      <link>https://waynecychang.github.io/note/2021-01/hugo-comand/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://waynecychang.github.io/blog/2020-11/lite-server-host-unity-web-game/</guid>
-      <description>使用node.js的lite-server，開啟Unity的Web Game</description>
+      <guid>https://waynecychang.github.io/note/2021-01/hugo-comand/</guid>
+      <description>各種Hugo指令，都再這拉</description>
+    </item>
+    
+    <item>
+      <title>Overview Observables 1</title>
+      <link>https://waynecychang.github.io/study/2021-01/overview-observables-1/</link>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://waynecychang.github.io/study/2021-01/overview-observables-1/</guid>
+      <description>各種Hugo指令，都再這拉</description>
     </item>
     
   </channel>
