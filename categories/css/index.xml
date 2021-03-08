@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on Wayne Chang</title>
+    <link>https://waynecychang.github.io/categories/css/</link>
+    <description>Recent content in CSS on Wayne Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Mon, 08 Mar 2021 10:14:40 +0800</lastBuildDate><atom:link href="https://waynecychang.github.io/categories/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Css Input Indicator</title>
+      <link>https://waynecychang.github.io/note/2021-03/css-input-indicator/</link>
+      <pubDate>Mon, 08 Mar 2021 10:14:40 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-03/css-input-indicator/</guid>
+      <description>控制input 閃爍條的顏色</description>
+    </item>
+    
+    <item>
+      <title>div文字超出範圍顯示...</title>
+      <link>https://waynecychang.github.io/note/2021-01/css-text-overflow/</link>
+      <pubDate>Tue, 19 Jan 2021 10:07:43 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-01/css-text-overflow/</guid>
+      <description>css再div內的文字顯示方式</description>
+    </item>
+    
+  </channel>
+</rss>

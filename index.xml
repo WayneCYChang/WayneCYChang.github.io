@@ -6,7 +6,34 @@
     <description>Recent content on Wayne Chang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://waynecychang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Mar 2021 10:22:01 +0800</lastBuildDate><atom:link href="https://waynecychang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ionic SCSS with Part</title>
+      <link>https://waynecychang.github.io/note/2021-03/ionic-scss-part/</link>
+      <pubDate>Mon, 08 Mar 2021 10:22:01 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-03/ionic-scss-part/</guid>
+      <description>再Ionic裡利用父元件class的改變，來變更由::part()所出的元件的樣式</description>
+    </item>
+    
+    <item>
+      <title>Css Input Indicator</title>
+      <link>https://waynecychang.github.io/note/2021-03/css-input-indicator/</link>
+      <pubDate>Mon, 08 Mar 2021 10:14:40 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-03/css-input-indicator/</guid>
+      <description>控制input 閃爍條的顏色</description>
+    </item>
+    
+    <item>
+      <title>div文字超出範圍顯示...</title>
+      <link>https://waynecychang.github.io/note/2021-01/css-text-overflow/</link>
+      <pubDate>Tue, 19 Jan 2021 10:07:43 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-01/css-text-overflow/</guid>
+      <description>css再div內的文字顯示方式</description>
+    </item>
+    
     <item>
       <title>Hugo不想再找一次指令表</title>
       <link>https://waynecychang.github.io/note/2021-01/hugo-comand/</link>
