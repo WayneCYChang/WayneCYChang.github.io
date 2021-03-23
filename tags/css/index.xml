@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Collapsible</title>
+      <link>https://waynecychang.github.io/note/2021-02/collapsible/</link>
+      <pubDate>Sat, 20 Feb 2021 09:28:45 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-02/collapsible/</guid>
+      <description>用Angular建立一個簡易的下拉選單</description>
+    </item>
+    
+    <item>
       <title>div文字超出範圍顯示...</title>
       <link>https://waynecychang.github.io/note/2021-01/css-text-overflow/</link>
       <pubDate>Tue, 19 Jan 2021 10:07:43 +0800</pubDate>

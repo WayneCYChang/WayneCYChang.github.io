@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Wayne Chang</title>
+    <link>https://waynecychang.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on Wayne Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Mon, 22 Feb 2021 09:24:50 +0800</lastBuildDate><atom:link href="https://waynecychang.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用正則表逹式來尋找取代字串</title>
+      <link>https://waynecychang.github.io/note/2020-02/regexp-replace/</link>
+      <pubDate>Mon, 22 Feb 2021 09:24:50 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2020-02/regexp-replace/</guid>
+      <description>利用小括號，來抓取符合小括號內正則表逹式的字串，再用$1、$2。。。來使用對應的字串。 const phoneFilter = /(^\d{3})(\d{4})(\d{3}$)/; value.replace(phoneFilter, &amp;#39;$1****$3&amp;#39;); 參考資料: 正規表逹式</description>
+    </item>
+    
+  </channel>
+</rss>

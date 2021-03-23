@@ -26,6 +26,51 @@
     </item>
     
     <item>
+      <title>Ionic Command</title>
+      <link>https://waynecychang.github.io/note/2021-02/ionic-command/</link>
+      <pubDate>Tue, 23 Feb 2021 10:59:33 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-02/ionic-command/</guid>
+      <description>常用的Ionic Command</description>
+    </item>
+    
+    <item>
+      <title>利用正則表逹式來尋找取代字串</title>
+      <link>https://waynecychang.github.io/note/2020-02/regexp-replace/</link>
+      <pubDate>Mon, 22 Feb 2021 09:24:50 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2020-02/regexp-replace/</guid>
+      <description>利用小括號，來抓取符合小括號內正則表逹式的字串，再用$1、$2。。。來使用對應的字串。 const phoneFilter = /(^\d{3})(\d{4})(\d{3}$)/; value.replace(phoneFilter, &amp;#39;$1****$3&amp;#39;); 參考資料: 正規表逹式</description>
+    </item>
+    
+    <item>
+      <title>Collapsible</title>
+      <link>https://waynecychang.github.io/note/2021-02/collapsible/</link>
+      <pubDate>Sat, 20 Feb 2021 09:28:45 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-02/collapsible/</guid>
+      <description>用Angular建立一個簡易的下拉選單</description>
+    </item>
+    
+    <item>
+      <title>Network Log</title>
+      <link>https://waynecychang.github.io/note/2021-02/network-log/</link>
+      <pubDate>Mon, 08 Feb 2021 16:03:27 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-02/network-log/</guid>
+      <description>dev too的header因為一些原因出現Provisional headers are shown</description>
+    </item>
+    
+    <item>
+      <title>Replay Subject用angular async收到error的行為</title>
+      <link>https://waynecychang.github.io/note/2021-01/replay-subject/</link>
+      <pubDate>Mon, 25 Jan 2021 10:41:28 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-01/replay-subject/</guid>
+      <description>使用replaySubject觸發error時的一些行為</description>
+    </item>
+    
+    <item>
       <title>div文字超出範圍顯示...</title>
       <link>https://waynecychang.github.io/note/2021-01/css-text-overflow/</link>
       <pubDate>Tue, 19 Jan 2021 10:07:43 +0800</pubDate>

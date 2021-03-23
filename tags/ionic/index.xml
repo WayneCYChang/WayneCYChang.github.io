@@ -16,5 +16,14 @@
       <description>再Ionic裡利用父元件class的改變，來變更由::part()所出的元件的樣式</description>
     </item>
     
+    <item>
+      <title>Ionic Command</title>
+      <link>https://waynecychang.github.io/note/2021-02/ionic-command/</link>
+      <pubDate>Tue, 23 Feb 2021 10:59:33 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-02/ionic-command/</guid>
+      <description>常用的Ionic Command</description>
+    </item>
+    
   </channel>
 </rss>

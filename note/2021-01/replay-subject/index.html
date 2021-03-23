@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="WayneChang">
+  <meta name="description" content="使用replaySubject觸發error時的一些行為">
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8DXVZB6RX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y8DXVZB6RX');
+</script>
+  
+  
+  <meta property="og:title" content="Replay Subject用angular async收到error的行為" />
+<meta property="og:description" content="使用replaySubject觸發error時的一些行為" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waynecychang.github.io/note/2021-01/replay-subject/" />
+<meta property="article:published_time" content="2021-01-25T10:41:28+08:00" />
+<meta property="article:modified_time" content="2021-01-25T10:41:28+08:00" />
+
+
+  <title>
+  
+       Replay Subject用angular async收到error的行為 | Wayne Chang 
+  
+  </title>
+
+  <link rel="canonical" href="https://waynecychang.github.io/note/2021-01/replay-subject/">
+
+  
+  
+
+  
+  <link href="https://waynecychang.github.io/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://waynecychang.github.io/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://waynecychang.github.io/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://waynecychang.github.io/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://waynecychang.github.io/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://waynecychang.github.io/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://waynecychang.github.io/img/animation-1.ico"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://waynecychang.github.io/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://waynecychang.github.io/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://waynecychang.github.io/">
+          
+        <img class="avatar" src="https://waynecychang.github.io/img/animation-1.ico" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> WayneChang</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://waynecychang.github.io/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://waynecychang.github.io/note/" >Note  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://waynecychang.github.io/study/" >Study  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://waynecychang.github.io/img/header-slides/raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://waynecychang.github.io/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://waynecychang.github.io/">
+          
+            <img class="pull-right avatar avatar-md" src="https://waynecychang.github.io/img/IMG_1068.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://waynecychang.github.io/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Wayne Chang</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/WayneCYChang" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+
+            
+
+            
+
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:e28s32is@gmail.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://waynecychang.github.io/categories/rxjs"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> rxjs </a></li>
+      
+    
+    
+  </ul>
+
+  <div class="px-4 post-heading">Replay Subject用angular async收到error的行為</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Jan 25, 2021</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>One minute read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <p>找到一篇<a href="https://stackoverflow.com/a/41828984/14704283">文章</a>
+擷取其中一段話</p>
+<blockquote>
+<p>The basic concept of RxJS is that any error or complete-call will basically &ldquo;kill&rdquo; a stream.
+This concept forces you not &ldquo;just to throw around errors here and there as you please&rdquo;
+but to handle errors and the flow of data within your application properly.</p>
+</blockquote>
+<p>簡單的說當收到 <strong>error()</strong> 或 <strong>complete()</strong> 時，資料流會被結束。可是有個有趣的地方，<strong>next()</strong> 出來的資料會收不到，但是error還是收的到。</p>
+<h3 id="範例">範例</h3>
+<ul>
+<li>
+<p>情境：</p>
+<ul>
+<li>建立一個replaySubject，設定replay最後兩結果，並在template中用async訂閱</li>
+<li>OnInit時，以間隔0.5秒，先發出三個next()，再發出二個error()，再發出一個next()，最後發出error()。</li>
+<li>在4秒時，訂閱replaySubject</li>
+</ul>
+</li>
+<li>
+<p>結果：</p>
+<ul>
+<li><strong>async</strong> 訂閱的資料會收到 <strong>3</strong>，且error()發出之後不再收到新資料</li>
+<li>在第4秒訂閱並顯示在console的資料，只出現2、3， <strong>error()</strong> 出現後的 <strong>next</strong> 不會被replay</li>
+<li>還是會收到最後產生的 <strong>error</strong> 資料</li>
+</ul>
+</li>
+</ul>
+<div
+  style="
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  "
+>
+  <iframe
+    src="https://stackblitz.com/edit/replay-subject-angular?ctl=1&amp;embed=1&amp;file=src/app/app.component.ts&amp;hideExplorer=1"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    "
+    allowfullscreen
+    title="StackBlitz"
+  ></iframe>
+</div>
+
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://waynecychang.github.io/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://waynecychang.github.io/tags/rxjs" role="button">rxjs </a></li>
+      
+    
+      <li><a href="https://waynecychang.github.io/tags/replaysubject" role="button">replaySubject </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://waynecychang.github.io/note/2021-01/css-text-overflow/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>div文字超出範圍顯示...</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://waynecychang.github.io/note/2021-02/network-log/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>Network Log</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%af%84%e4%be%8b">
+												 範例
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/WayneCYChang " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:e28s32is@gmail.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2021 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://waynecychang.github.io/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://waynecychang.github.io/js/main.js"></script>
+
+
+
+  
+  <script src="https://waynecychang.github.io/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://waynecychang.github.io/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://waynecychang.github.io/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8DXVZB6RX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y8DXVZB6RX');
+</script>
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

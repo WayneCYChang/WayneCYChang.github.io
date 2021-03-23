@@ -6,7 +6,16 @@
     <description>Recent content in command on Wayne Chang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://waynecychang.github.io/tags/command/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Feb 2021 10:59:33 +0800</lastBuildDate><atom:link href="https://waynecychang.github.io/tags/command/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ionic Command</title>
+      <link>https://waynecychang.github.io/note/2021-02/ionic-command/</link>
+      <pubDate>Tue, 23 Feb 2021 10:59:33 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-02/ionic-command/</guid>
+      <description>常用的Ionic Command</description>
+    </item>
+    
     <item>
       <title>Hugo不想再找一次指令表</title>
       <link>https://waynecychang.github.io/note/2021-01/hugo-comand/</link>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chrome on Wayne Chang</title>
+    <link>https://waynecychang.github.io/tags/chrome/</link>
+    <description>Recent content in chrome on Wayne Chang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Mon, 08 Feb 2021 16:03:27 +0800</lastBuildDate><atom:link href="https://waynecychang.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network Log</title>
+      <link>https://waynecychang.github.io/note/2021-02/network-log/</link>
+      <pubDate>Mon, 08 Feb 2021 16:03:27 +0800</pubDate>
+      
+      <guid>https://waynecychang.github.io/note/2021-02/network-log/</guid>
+      <description>dev too的header因為一些原因出現Provisional headers are shown</description>
+    </item>
+    
+  </channel>
+</rss>
